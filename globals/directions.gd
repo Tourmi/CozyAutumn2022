@@ -1,3 +1,5 @@
+class_name Directions
+
 enum {
 	UP,
 	DOWN,

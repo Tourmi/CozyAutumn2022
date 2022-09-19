@@ -1,9 +1,6 @@
 class_name Actor
 extends KinematicBody2D
 
-const Directions = preload("res://globals/directions.gd")
-
-
 export var movement_speed : float = 150
 
 onready var _sprite := get_node("AnimatedSprite") as AnimatedSprite
@@ -36,7 +33,7 @@ func _get_direction() -> String:
 	return Directions.get_string(_direction)
 
 func _set_direction(dir : Vector2) -> void:
-	if abs(dir.x) > abs(dir.y):
+	if abs(dir.x) >= abs(dir.y):
 		if dir.x > 0:
 			_direction = Directions.RIGHT
 		else:
