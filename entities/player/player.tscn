@@ -1,10 +1,9 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://entities/player/player.png" type="Texture" id=1]
 [ext_resource path="res://entities/player/player.gd" type="Script" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 2.5, 7 )
+[ext_resource path="res://entities/player/target.gd" type="Script" id=3]
+[ext_resource path="res://entities/player/target_tile.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
@@ -145,19 +144,60 @@ animations = [ {
 "speed": 2.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=1]
+custom_solver_bias = 0.154
+extents = Vector2( 2.5, 3 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 4 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 4 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=27]
+animations = [ {
+"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ) ],
+"loop": true,
+"name": "default",
+"speed": 9.0
+} ]
+
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 2
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 movement_speed = 150.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, 5 )
-shape = SubResource( 1 )
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.5, -9 )
 frames = SubResource( 4 )
 animation = "idle_down"
-frame = 1
 playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+
+[node name="Target" type="Node2D" parent="."]
+position = Vector2( 0, 11 )
+script = ExtResource( 3 )
+target_distance = 11
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Target"]
+frames = SubResource( 27 )
+playing = true
+centered = false

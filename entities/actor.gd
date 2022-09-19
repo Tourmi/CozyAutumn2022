@@ -9,6 +9,7 @@ export var movement_speed : float = 150
 onready var _sprite := get_node("AnimatedSprite") as AnimatedSprite
 
 var _movement := Vector2(0, 0)
+var _can_move := true
 var _is_moving := false
 var _direction := Directions.DOWN
 
