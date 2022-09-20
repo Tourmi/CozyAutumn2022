@@ -1,7 +1,7 @@
 class_name Tool
 extends Node2D
 
-signal finished_using
+signal finished_using()
 
 var can_use : bool setget , _can_use_tool
 
@@ -14,7 +14,7 @@ func use_tool(_global_pos : Vector2) -> void:
 	var err = _timer.connect("timeout", self, "_on_timer_timeout")
 	assert(err == OK)
 	add_child(_timer)
-	_timer.start(0.75)
+	_timer.start(0.25)
 
 func _on_timer_timeout():
 	remove_child(_timer)
