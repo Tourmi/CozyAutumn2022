@@ -1,16 +1,29 @@
 extends Node
 
+signal selected_tool_changed(index)
+
 var selected_tool_index : int = 0
-# The player's inventory. The size of the array determines the maximum player inventory
-export var inventory : Array
+var inventory : Array
+
+var _level : Game_Level
 
 func _ready():
-	inventory[0] = Seeds.new(load("res://entities/tools/seeds/pumpkin_seed.tres") as Seed_Data)
-	inventory[1] = Shovel.new()
-	inventory[2] = WaterCan.new()
-	add_child(inventory[0])
-	add_child(inventory[1])
-	add_child(inventory[2])
+	inventory.append(Seeds.new(preload("res://entities/tools/seeds/pumpkin_seed.tres") as Seed_Data))
+	add_child(inventory.back())
+	inventory.append(Shovel.new())
+	add_child(inventory.back())
+	inventory.append(WaterCan.new())
+	add_child(inventory.back())
+	inventory.append(WaterCan.new())
+	add_child(inventory.back())
+	inventory.append(WaterCan.new())
+	add_child(inventory.back())
+	inventory.append(WaterCan.new())
+	add_child(inventory.back())
+	inventory.append(WaterCan.new())
+	add_child(inventory.back())
+	inventory.append(WaterCan.new())
+	add_child(inventory.back())
 
 func get_selected_tool() -> Tool:
 	return inventory[selected_tool_index] as Tool
@@ -18,7 +31,9 @@ func get_selected_tool() -> Tool:
 func next_tool() -> void:
 	selected_tool_index += 1
 	if selected_tool_index >= inventory.size(): selected_tool_index = 0
+	emit_signal("selected_tool_changed", selected_tool_index)
 
 func previous_tool() -> void:
 	selected_tool_index -= 1
 	if selected_tool_index < 0: selected_tool_index = inventory.size() - 1
+	emit_signal("selected_tool_changed", selected_tool_index)

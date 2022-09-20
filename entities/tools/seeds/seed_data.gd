@@ -5,3 +5,4 @@ extends Resource
 export var value : int = 3
 #The plant data of this seed
 export var plant_data : Resource
+export var icon : Texture

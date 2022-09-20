@@ -3,6 +3,7 @@ extends Node2D
 
 signal finished_using()
 
+var icon : Texture
 var can_use : bool setget , _can_use_tool
 
 var _timer : Timer

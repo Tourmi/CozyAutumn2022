@@ -1,6 +1,9 @@
 class_name Shovel
 extends Tool
 
+func _ready():
+	icon = preload("res://entities/tools/shovel/shovel.png")
+
 var _to_dig_location : Vector2
 
 func use_tool(global_pos : Vector2) -> void:

@@ -1,8 +1,10 @@
 class_name WaterCan
 extends Tool
 
-
 var _to_water_location : Vector2
+
+func _ready():
+	icon = preload("res://entities/tools/water_can/water_can.png")
 
 func use_tool(global_pos : Vector2) -> void:
 	_to_water_location = Utils.get_tile_location(global_pos)
