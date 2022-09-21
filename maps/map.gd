@@ -29,12 +29,15 @@ func has_turned_soil(tile_index : Vector2) -> bool:
 func has_wet_soil(tile_index : Vector2) -> bool:
 	return wet_soil.get_cellv(tile_index) != TileMap.INVALID_CELL
 
-func has_plant(tile_index : Vector2) -> bool:
+func get_plant(tile_index : Vector2) -> Plant:
 	for child in _plants_node.get_children():
 		var plant := child as Plant
 		if Utils.to_tile_index(plant.global_position) == tile_index:
-			return true
-	return false
+			return plant
+	return null
+
+func has_plant(tile_index : Vector2) -> bool:
+	return get_plant(tile_index) != null
 
 func try_turn_soil(tile_index : Vector2) -> bool:
 	if can_turn_soil(tile_index):
@@ -46,6 +49,8 @@ func try_water_soil(tile_index : Vector2) -> bool:
 	if can_water_soil(tile_index):
 		var autotile_coord := turned_soil.get_cell_autotile_coord(tile_index.x, tile_index.y)
 		wet_soil.set_cell(tile_index.x, tile_index.y, wet_soil.tile_set.find_tile_by_name("Wet Soil"), false, false, false, autotile_coord)
+		var plant := get_plant(tile_index)
+		if plant != null: plant.is_watered = true
 		return true
 	return false
 
@@ -66,8 +71,16 @@ func try_plant_seed(seed_data : Seed_Data, tile_index : Vector2) -> bool:
 	new_plant.init(seed_data.plant_data)
 	_plants_node.add_child(new_plant)
 	new_plant.global_position = Utils.to_position(tile_index)
-	
+	if has_wet_soil(tile_index): new_plant.is_watered = true
 	return true
+
+func next_day() -> void:
+	for child in _plants_node.get_children():
+		var plant := child as Plant
+		plant.next_day()
+	
+	clear_wet_soil()
+	clear_turned_soil()
 
 func get_size() -> Rect2:
 	return background.get_used_rect()

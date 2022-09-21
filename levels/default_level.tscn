@@ -5,7 +5,7 @@
 [ext_resource path="res://levels/level.gd" type="Script" id=3]
 [ext_resource path="res://ui/hud/hud.tscn" type="PackedScene" id=4]
 
-[node name="Default_Level" type="Node"]
+[node name="Default_Level" type="YSort"]
 script = ExtResource( 3 )
 
 [node name="Map" parent="." instance=ExtResource( 2 )]

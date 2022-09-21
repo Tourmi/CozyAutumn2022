@@ -7,3 +7,13 @@
 script = ExtResource( 2 )
 
 [node name="Hotbar" parent="." instance=ExtResource( 1 )]
+
+[node name="TEMP Next Day" type="Button" parent="."]
+margin_left = 306.541
+margin_top = 192.825
+margin_right = 376.541
+margin_bottom = 212.825
+text = "Next Day"
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -226,6 +226,6 @@ target_distance = 14
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Target"]
 frames = SubResource( 32 )
-frame = 1
+frame = 2
 playing = true
 centered = false

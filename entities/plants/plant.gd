@@ -22,3 +22,7 @@ func _process(delta : float) -> void:
 
 func _update_sprite_frame() -> void:
 	_sprite.frame = _plant_data.texture_columns * _plant_data.texture_row + current_cycle
+
+func next_day() -> void:
+	current_cycle = min(_plant_data.cycle_count - 1, current_cycle + (1 if is_watered else 0))
+	is_watered = false
