@@ -59,10 +59,8 @@ func clear_wet_soil() -> void:
 
 func clear_turned_soil() -> void:
 	wet_soil.clear()
-	turned_soil.clear()
-	for child in _plants_node.get_children():
-		var plant : Plant = child as Plant
-		turned_soil.set_cellv(Utils.to_tile_index(plant.global_position), turned_soil.tile_set.find_tile_by_name("Turned Soil"))
+	for tile in turned_soil.get_used_cells():
+		if not has_plant(tile): turned_soil.set_cellv(tile, TileMap.INVALID_CELL)
 
 func try_plant_seed(seed_data : Seed_Data, tile_index : Vector2) -> bool:
 	if not can_plant(tile_index): return false
