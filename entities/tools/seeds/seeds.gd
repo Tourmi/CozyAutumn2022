@@ -19,3 +19,6 @@ func use_tool(global_pos : Vector2) -> void:
 func _on_timer_timeout():
 	Utils.get_map().try_plant_seed(_seed_data, Utils.to_tile_index(_to_plant_location))
 	._on_timer_timeout()
+
+func _get_particles_scene() -> PackedScene:
+	return preload("res://entities/tools/seeds/seed_particles.tscn")
