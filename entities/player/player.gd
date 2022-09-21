@@ -5,6 +5,7 @@ onready var target = $Target as Target
 var _using_tool := false
 
 func _process(delta : float) -> void:
+	if Utils.is_paused(): return
 	if not _using_tool:
 		if Input.is_action_just_pressed("use_tool"):
 			_using_tool = true

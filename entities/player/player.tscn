@@ -209,6 +209,7 @@ __meta__ = {
 position = Vector2( 0.5, -9 )
 frames = SubResource( 26 )
 animation = "idle_down"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -229,6 +230,5 @@ target_distance = 14
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Target"]
 frames = SubResource( 32 )
-frame = 1
 playing = true
 centered = false
