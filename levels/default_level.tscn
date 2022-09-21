@@ -11,6 +11,6 @@ script = ExtResource( 3 )
 [node name="Map" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 88.1133, 55.5619 )
+position = Vector2( 150, 90 )
 
 [node name="Hud" parent="." instance=ExtResource( 4 )]

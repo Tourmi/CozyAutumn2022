@@ -68,3 +68,6 @@ func try_plant_seed(seed_data : Seed_Data, tile_index : Vector2) -> bool:
 	new_plant.global_position = Utils.to_position(tile_index)
 	
 	return true
+
+func get_size() -> Rect2:
+	return background.get_used_rect()
