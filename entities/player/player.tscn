@@ -198,6 +198,7 @@ animations = [ {
 } ]
 
 [node name="Player" type="KinematicBody2D"]
+z_index = 2
 collision_layer = 2
 script = ExtResource( 2 )
 __meta__ = {
@@ -228,6 +229,6 @@ target_distance = 14
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Target"]
 frames = SubResource( 32 )
-frame = 3
+frame = 1
 playing = true
 centered = false

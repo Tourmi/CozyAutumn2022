@@ -11,6 +11,8 @@ func to_tile_index(point : Vector2) -> Vector2:
 func to_position(tile_index : Vector2) -> Vector2:
 	return tile_index * ProjectSettings.get_setting("world/2d/cell_size") as int
 
-func get_map() -> Game_Map:
-	var level := get_tree().current_scene as Game_Level
-	return level.map
+func get_map() -> Game_Map: return get_level().map
+func get_level() -> Game_Level: return get_tree().current_scene as Game_Level
+
+func is_paused() -> bool: return is_inventory_open()
+func is_inventory_open() -> bool: return get_level().hud.inventory.is_open()

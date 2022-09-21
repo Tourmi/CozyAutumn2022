@@ -14,6 +14,7 @@ func _process(_delta) -> void:
 	_update_animation()
 
 func _physics_process(_delta) -> void:
+	if Utils.is_paused(): return
 	var move := move_and_slide(movement_speed * _movement)
 	_is_moving = move.length_squared() > 0
 	if _is_moving:

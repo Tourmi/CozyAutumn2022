@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tilesheet.png-e67ff9d3d4a2b4fcb5d8228b0324adda.stex"
+path="res://.import/dither_background.png-6274749e76aa2caa6ab9f93b4f2e95a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maps/main_map/tilesheet.png"
-dest_files=[ "res://.import/tilesheet.png-e67ff9d3d4a2b4fcb5d8228b0324adda.stex" ]
+source_file="res://menus/inventory/dither_background.png"
+dest_files=[ "res://.import/dither_background.png-6274749e76aa2caa6ab9f93b4f2e95a8.stex" ]
 
 [params]
 

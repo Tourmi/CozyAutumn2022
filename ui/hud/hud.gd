@@ -2,6 +2,7 @@ class_name Hud
 extends CanvasLayer
 
 onready var hotbar : Hotbar = $Hotbar
+onready var inventory : Inventory = $Inventory
 onready var next_day : Button = $"TEMP Next Day"
 
 func _ready():

@@ -2,6 +2,8 @@ extends Node
 
 signal selected_tool_changed(index)
 
+export var money : int = 1000
+
 var selected_tool_index : int = 0
 var inventory : Array
 
@@ -30,10 +32,10 @@ func get_selected_tool() -> Tool:
 
 func next_tool() -> void:
 	selected_tool_index += 1
-	if selected_tool_index >= inventory.size(): selected_tool_index = 0
+	if selected_tool_index >= min(inventory.size(), 8): selected_tool_index = 0
 	emit_signal("selected_tool_changed", selected_tool_index)
 
 func previous_tool() -> void:
 	selected_tool_index -= 1
-	if selected_tool_index < 0: selected_tool_index = inventory.size() - 1
+	if selected_tool_index < 0: selected_tool_index = min(inventory.size() - 1, 7)
 	emit_signal("selected_tool_changed", selected_tool_index)

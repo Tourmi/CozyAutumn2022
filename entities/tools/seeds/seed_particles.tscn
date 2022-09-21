@@ -6,6 +6,7 @@
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.490909 ), 0.0, 0.0, 0, 0 ]
 
 [node name="Seed Particles" type="Node2D"]
+z_index = 1
 script = ExtResource( 1 )
 particles = [ NodePath("CPUParticles2D3"), NodePath("CPUParticles2D"), NodePath("CPUParticles2D2") ]
 
