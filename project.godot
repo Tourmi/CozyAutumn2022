@@ -72,7 +72,7 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "Plant_Data",
 "language": "GDScript",
-"path": "res://entities/plants/plant_data.gd"
+"path": "res://entities/plants/data/plant_data.gd"
 }, {
 "base": "Actor",
 "class": "Player_Actor",

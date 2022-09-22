@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://entities/plants/data/plant_data.gd" type="Script" id=1]
+[ext_resource path="res://entities/plants/plants.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+value = 10
+days_per_cycle = 1
+cycle_count = 7
+texture = ExtResource( 2 )
+texture_rows = 8
+texture_row = 6
+texture_columns = 7

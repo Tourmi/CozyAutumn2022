@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pumpkin_seed.png-b7f4ab7b53a8a7b96892e49ad9f06a21.stex"
+path="res://.import/tomato_seed.png-048be81e855ff03ab8936fb2f8011767.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/tools/seeds/pumpkin_seed.png"
-dest_files=[ "res://.import/pumpkin_seed.png-b7f4ab7b53a8a7b96892e49ad9f06a21.stex" ]
+source_file="res://entities/tools/seeds/tomato_seed.png"
+dest_files=[ "res://.import/tomato_seed.png-048be81e855ff03ab8936fb2f8011767.stex" ]
 
 [params]
 
