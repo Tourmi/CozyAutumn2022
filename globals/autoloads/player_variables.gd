@@ -13,9 +13,6 @@ export var money : int = 1000
 var selected_tool_index : int = 0
 var inventory : Array
 
-
-var _level : Game_Level
-
 func _ready():
 	_no_tool = NoTool.new()
 	add_child(_no_tool)
