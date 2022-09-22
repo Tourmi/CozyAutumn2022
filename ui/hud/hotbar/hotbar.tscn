@@ -18,33 +18,65 @@ __meta__ = {
 hotbar_squares = [ NodePath("HotbarSquare1"), NodePath("HotbarSquare2"), NodePath("HotbarSquare3"), NodePath("HotbarSquare4"), NodePath("HotbarSquare5"), NodePath("HotbarSquare6"), NodePath("HotbarSquare7"), NodePath("HotbarSquare8") ]
 
 [node name="HotbarSquare1" parent="." instance=ExtResource( 1 )]
-margin_left = 96.0
-margin_right = 120.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 192.0
+margin_right = 192.0
+margin_bottom = 24.0
+texture = null
 
 [node name="HotbarSquare2" parent="." instance=ExtResource( 1 )]
-margin_left = 120.0
-margin_right = 144.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 192.0
+margin_right = 192.0
+margin_bottom = 24.0
+texture = null
 
 [node name="HotbarSquare3" parent="." instance=ExtResource( 1 )]
-margin_left = 144.0
-margin_right = 168.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 192.0
+margin_right = 192.0
+margin_bottom = 24.0
+texture = null
 
 [node name="HotbarSquare4" parent="." instance=ExtResource( 1 )]
-margin_left = 168.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 192.0
 margin_right = 192.0
+margin_bottom = 24.0
+texture = null
 
 [node name="HotbarSquare5" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 192.0
-margin_right = 216.0
+margin_right = 192.0
+margin_bottom = 24.0
+texture = null
 
 [node name="HotbarSquare6" parent="." instance=ExtResource( 1 )]
-margin_left = 216.0
-margin_right = 240.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 192.0
+margin_right = 192.0
+margin_bottom = 24.0
+texture = null
 
 [node name="HotbarSquare7" parent="." instance=ExtResource( 1 )]
-margin_left = 240.0
-margin_right = 264.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 192.0
+margin_right = 192.0
+margin_bottom = 24.0
+texture = null
 
 [node name="HotbarSquare8" parent="." instance=ExtResource( 1 )]
-margin_left = 264.0
-margin_right = 288.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 192.0
+margin_right = 192.0
+margin_bottom = 24.0
+texture = null

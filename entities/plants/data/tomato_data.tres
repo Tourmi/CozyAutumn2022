@@ -6,9 +6,11 @@
 [resource]
 script = ExtResource( 1 )
 value = 10
-days_per_cycle = 1
+days_before_ready = 10
 cycle_count = 6
 texture = ExtResource( 2 )
 texture_rows = 8
 texture_row = 4
 texture_columns = 7
+minimum_yield = 3
+maximum_yield = 4

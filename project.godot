@@ -44,7 +44,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ui/hud/hotbar/hotbar.gd"
 }, {
-"base": "TextureRect",
+"base": "InventorySquare",
 "class": "HotbarSquare",
 "language": "GDScript",
 "path": "res://ui/hud/hotbar/hotbar_square.gd"
@@ -58,6 +58,11 @@ _global_script_classes=[ {
 "class": "Inventory",
 "language": "GDScript",
 "path": "res://menus/inventory/inventory.gd"
+}, {
+"base": "TextureRect",
+"class": "InventorySquare",
+"language": "GDScript",
+"path": "res://menus/inventory/inventory_square.gd"
 }, {
 "base": "Tool",
 "class": "NoTool",
@@ -120,6 +125,7 @@ _global_script_class_icons={
 "HotbarSquare": "",
 "Hud": "",
 "Inventory": "",
+"InventorySquare": "",
 "NoTool": "",
 "Plant": "",
 "Plant_Data": "",
