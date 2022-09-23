@@ -1,7 +1,7 @@
 class_name Inventory
 extends Control
 
-onready var _money_label : Label = $CenterPanel/PanelContainer/VBoxContainer/HSplitContainer/Money
+onready var _money_label : Label = $CenterPanel/PanelContainer/VBoxContainer/HSplitContainer/HBoxContainer/Money
 onready var _date_label : Label = $CenterPanel/PanelContainer/VBoxContainer/HSplitContainer/Date
 
 export var top_row : NodePath
@@ -17,7 +17,7 @@ func _ready() -> void:
 	_process_inventory_changed(PlayerVariables.inventory)
 
 func _process(_delta : float) -> void:
-	_money_label.text = "$ %09d" % PlayerVariables.money
+	_money_label.text = "%09d" % PlayerVariables.money
 	if Input.is_action_just_pressed("open_inventory"):
 		visible = not visible
 

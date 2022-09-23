@@ -142,7 +142,7 @@ _global_script_class_icons={
 
 config/name="CozyAutumn2022"
 run/main_scene="res://levels/default_level.tscn"
-config/icon="res://icon.png"
+config/icon="res://ui/coin.png"
 
 [autoload]
 

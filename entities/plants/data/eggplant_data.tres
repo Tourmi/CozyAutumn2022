@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource( 1 )
 value = 10
-days_before_ready = 10
+days_before_ready = 11
 cycle_count = 7
 texture = ExtResource( 2 )
 texture_rows = 8
